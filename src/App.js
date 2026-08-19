@@ -1,40 +1,43 @@
+import { useState } from "react";
 import "./App.css";
 
-export default function Tabuleiro() {
-  function Square({valor}) {
-    function handleClick() {
-      console.log("Botão clicado!!!");
-    }
+function Square() {
+  const [valor, setValor] = useState(null);
 
-    return (
-      <button 
-        className="square"
-        onClick={handleClick}
-      >
-          {valor}
-      </button>
-    );
+  function handleClick() {
+    setValor("X");
   }
 
   return (
+    <button 
+      className="square"
+      onClick={handleClick}
+    >
+        {valor}
+    </button>
+  );
+}
+
+export default function Tabuleiro() {
+  return (
     <>
-      <div>
-        <Square valor="1" />
-        <Square valor="2" />
-        <Square valor="3" />
-      </div>
+    <div>
+      <Square/>
+      <Square/>
+      <Square/>
+    </div>
 
-      <div>
-        <Square valor="4" />
-        <Square valor="5" />
-        <Square valor="6" />
-      </div>
+    <div>
+      <Square/>
+      <Square/>
+      <Square/>
+    </div>
 
-      <div>
-        <Square valor="7" />
-        <Square valor="8" />
-        <Square valor="9" />
-      </div>
+    <div>
+      <Square/>
+      <Square/>
+      <Square/>
+    </div>
     </>
   );
 }
