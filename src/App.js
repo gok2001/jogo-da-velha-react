@@ -12,7 +12,9 @@ export default function Tabuleiro() {
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
-    if (squares[i]) return;
+    if (squares[i] || calculaVencedor(squares)) {
+      return;
+    }
 
     const nextSquares = squares.slice();
 
