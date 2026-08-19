@@ -1,9 +1,19 @@
 import "./App.css";
 
 export default function Tabuleiro() {
-
   function Square({valor}) {
-    return <button className="square">{valor}</button>
+    function handleClick() {
+      console.log("Botão clicado!!!");
+    }
+
+    return (
+      <button 
+        className="square"
+        onClick={handleClick}
+      >
+          {valor}
+      </button>
+    );
   }
 
   return (
