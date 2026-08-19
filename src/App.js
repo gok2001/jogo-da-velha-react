@@ -1,28 +1,29 @@
 import "./App.css";
 
 export default function Square() {
-  function Square() {
-    return <button className="square">1</button>
+
+  function Square({valor}) {
+    return <button className="square">{valor}</button>
   }
 
   return (
     <>
       <div>
-        <Square/>
-        <Square/>
-        <Square/>
+        <Square valor="1" />
+        <Square valor="2" />
+        <Square valor="3" />
       </div>
 
       <div>
-        <Square/>
-        <Square/>
-        <Square/>
+        <Square valor="4" />
+        <Square valor="5" />
+        <Square valor="6" />
       </div>
-      
+
       <div>
-        <Square/>
-        <Square/>
-        <Square/>
+        <Square valor="7" />
+        <Square valor="8" />
+        <Square valor="9" />
       </div>
     </>
   );
