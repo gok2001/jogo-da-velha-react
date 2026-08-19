@@ -1,6 +1,6 @@
 import "./App.css";
 
-export default function Square() {
+export default function Tabuleiro() {
 
   function Square({valor}) {
     return <button className="square">{valor}</button>
