@@ -30,21 +30,25 @@ export default function Tabuleiro() {
 
   return (
     <>
-    <div class="tabuleiro">
-      <div className="linha">
-        <Square valor={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square valor={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square valor={squares[2]} onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="linha">
-        <Square valor={squares[3]} onSquareClick={() => handleClick(3)} />
-        <Square valor={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square valor={squares[5]} onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="linha">
-        <Square valor={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square valor={squares[7]} onSquareClick={() => handleClick(7)} />
-        <Square valor={squares[8]} onSquareClick={() => handleClick(8)} />
+    <h1 className="game-title">Jogo da Velha</h1>
+
+    <div class="game-container">
+      <div class="board">
+        <div className="linha">
+          <Square valor={squares[0]} onSquareClick={() => handleClick(0)} />
+          <Square valor={squares[1]} onSquareClick={() => handleClick(1)} />
+          <Square valor={squares[2]} onSquareClick={() => handleClick(2)} />
+        </div>
+        <div className="linha">
+          <Square valor={squares[3]} onSquareClick={() => handleClick(3)} />
+          <Square valor={squares[4]} onSquareClick={() => handleClick(4)} />
+          <Square valor={squares[5]} onSquareClick={() => handleClick(5)} />
+        </div>
+        <div className="linha">
+          <Square valor={squares[6]} onSquareClick={() => handleClick(6)} />
+          <Square valor={squares[7]} onSquareClick={() => handleClick(7)} />
+          <Square valor={squares[8]} onSquareClick={() => handleClick(8)} />
+        </div>
       </div>
     </div>
     </>
