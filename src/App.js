@@ -37,23 +37,17 @@ function Tabuleiro({ xIsNext, squares, onPlay }) {
     <>
     <div class="game-container">
       <h1 className="game-title">Jogo da Velha</h1>
-      <div className="status">{status}</div>
+      <div className="game-status">{status}</div>
       <div class="board">
-        <div className="linha">
-          <Square valor={squares[0]} onSquareClick={() => handleClick(0)} />
-          <Square valor={squares[1]} onSquareClick={() => handleClick(1)} />
-          <Square valor={squares[2]} onSquareClick={() => handleClick(2)} />
-        </div>
-        <div className="linha">
-          <Square valor={squares[3]} onSquareClick={() => handleClick(3)} />
-          <Square valor={squares[4]} onSquareClick={() => handleClick(4)} />
-          <Square valor={squares[5]} onSquareClick={() => handleClick(5)} />
-        </div>
-        <div className="linha">
-          <Square valor={squares[6]} onSquareClick={() => handleClick(6)} />
-          <Square valor={squares[7]} onSquareClick={() => handleClick(7)} />
-          <Square valor={squares[8]} onSquareClick={() => handleClick(8)} />
-        </div>
+        <Square valor={squares[0]} onSquareClick={() => handleClick(0)} />
+        <Square valor={squares[1]} onSquareClick={() => handleClick(1)} />
+        <Square valor={squares[2]} onSquareClick={() => handleClick(2)} />
+        <Square valor={squares[3]} onSquareClick={() => handleClick(3)} />
+        <Square valor={squares[4]} onSquareClick={() => handleClick(4)} />
+        <Square valor={squares[5]} onSquareClick={() => handleClick(5)} />
+        <Square valor={squares[6]} onSquareClick={() => handleClick(6)} />
+        <Square valor={squares[7]} onSquareClick={() => handleClick(7)} />
+        <Square valor={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
     </div>
     </>
@@ -76,7 +70,7 @@ export default function Game() {
     setCurrentMove(nextMove);
   }
 
-  const moves = history.map((squares, move) => {
+  const moves = history.map((move) => {
     let description;
 
     if (move > 0) {
